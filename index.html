@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Magical Birthday Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center">
+    <button id="openBtn">🎁 Open Your Birthday Surprise!</button>
+  </div>
+
+  <div id="cardContent" class="hidden center">
+    <div id="balloons"></div>
+
+    <div id="cake">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+
+    <button onclick="blowCandles()">🎂 Blow Candles</button>
+    <div id="message" class="hidden">✨ Happy Birthday, Ruchi! Wishing you a sparkling year ahead full of joy, surprises, and magical moments! ✨</div>
+    <audio id="song" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+       

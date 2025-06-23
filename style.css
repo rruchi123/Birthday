@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #ffd6ec, #aee2ff);
+  overflow: hidden;
+}
+
+.center {
+  text-align: center;
+  padding-top: 20vh;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 24px;
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  border-radius: 50% 50% 50% 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, hsl(340, 70%, 60%));
+  box-shadow: inset -5px -10px 10px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: -120px;
+  animation: floatUp 6s ease-in infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-130vh); opacity: 0; }
+}
+
+#cake {
+  margin: 40px auto;
+  width: 220px;
+  height: 180px;
+  background: #f4a460;
+  border-radius: 15px 15px 5px 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding-top: 20px;
+}
+
+.layer {
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
+  background: #fff0f5;
+  border-radius: 10px;
+  margin-top: -10px;
+  border: 2px solid #fca;
+}
+
+.candle {
+  width: 10px;
+  height: 40px;
+  background: orange;
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  top: -60px;
+}
+.flame {
+  width: 12px;
+  height: 12px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -1px;
+  animation: flicker .2s infinite alternate;
+}
+@keyframes flicker {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+#message {
+  font-size: 1.8rem;
+  color: #e91e63;
+  margin-top: 30px;
+}
+
+.glitter {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff, #ff69b4, #87cefa);
+  border-radius: 50%;
+  animation: fall linear infinite;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 9999;
+}
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
